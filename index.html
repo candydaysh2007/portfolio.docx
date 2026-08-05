@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAYS.DEV - Portfolio</title>
+    <title>Dayshna AR - Portfolio</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -43,10 +43,10 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent-color);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         nav a {
@@ -257,7 +257,7 @@
 <body>
 
     <header>
-        <div class="logo">DAYS.DEV</div>
+        <div class="logo">Dayshna AR</div>
         <nav>
             <a href="#">About</a>
             <a href="#education">Education</a>
@@ -334,13 +334,13 @@
         cards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left; //x position within card
-                const y = e.clientY - rect.top;  //y position within card
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
 
-                const rotateX = ((y - centerY) / centerY) * -8; // Max rotation deg
+                const rotateX = ((y - centerY) / centerY) * -8;
                 const rotateY = ((x - centerX) / centerX) * 8;
 
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
