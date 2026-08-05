@@ -123,7 +123,7 @@
             box-shadow: 0 20px 45px var(--accent-glow);
         }
 
-        /* Profile Image Container with Glowing Ring */
+        /* Profile Image Container */
         .profile-img-wrapper {
             position: relative;
             width: 140px;
@@ -143,7 +143,7 @@
         .profile-name {
             font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             letter-spacing: 1px;
             color: var(--text-main);
         }
@@ -151,6 +151,31 @@
         .profile-name span {
             color: var(--accent-color);
             text-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* About Section Box inside Profile */
+        .about-box {
+            text-align: left;
+            background: rgba(11, 15, 25, 0.5);
+            border: 1px solid var(--border-color);
+            padding: 22px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+        }
+
+        .about-box h3 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .about-box p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.6;
         }
 
         /* Info Rows inside Profile Card */
@@ -335,17 +360,25 @@
             <a href="https://github.com/candydaysh2007" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:your_email@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:dayshnaar@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
 
         <!-- Profile / About Card with 3D Tilt -->
         <div class="tilt-card">
             <div class="profile-img-wrapper">
-                <!-- Replace the src link below with your profile picture URL if you want -->
-                <img src="https://i.postimg.cc/x1dBdNJg/ibm.jpg" alt="Dayshna AR Profile" class="profile-img">
+                <!-- Profile Image URL -->
+                <img src="https://i.postimg.cc/sx59szRm/Daysh.jpg" alt="Dayshna AR Profile" class="profile-img">
             </div>
             
             <h1 class="profile-name">Dayshna <span>AR</span></h1>
+
+            <!-- About Me Section -->
+            <div class="about-box">
+                <h3><i class="fas fa-user-circle"></i> About Me</h3>
+                <p>I am a dedicated second-year B.Tech Computer Science student specializing in Artificial Intelligence and Machine Learning at SRM Institute of Science and Technology (SRMIST), Ramapuram.<br><br>
+                Passionate about technology and innovation, I enjoy developing software solutions, strengthening my understanding of core computer science concepts using C and C++, writing efficient Python programs, designing responsive web interfaces with HTML and CSS, and automating workflows using n8n.<br><br>
+                I possess strong leadership and communication skills, enabling me to collaborate effectively in team environments and confidently take on team lead responsibilities when required. I am a quick learner with a problem-solving mindset and adapt well to new challenges. Additionally, I am fluent in Tamil, English, and Hindi, allowing me to communicate effectively with diverse teams and individuals.</p>
+            </div>
 
             <!-- Degree & Major -->
             <div class="info-row">
@@ -389,11 +422,11 @@
             <h2 class="section-title">Technical Skills</h2>
         </div>
         <div class="skills-grid">
+            <div class="skill-badge">C / C++</div>
             <div class="skill-badge">Python</div>
-            <div class="skill-badge">Machine Learning</div>
-            <div class="skill-badge">AI Algorithms</div>
+            <div class="skill-badge">AI & ML</div>
             <div class="skill-badge">HTML / CSS</div>
-            <div class="skill-badge">JavaScript</div>
+            <div class="skill-badge">n8n Automation</div>
             <div class="skill-badge">Git & GitHub</div>
         </div>
 
@@ -447,8 +480,8 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
 
-                const rotateX = ((y - centerY) / centerY) * -6;
-                const rotateY = ((x - centerX) / centerX) * 6;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
 
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
             });
